@@ -15,7 +15,7 @@ const SearchPage = ({ data }: { data: Anime[] }) => {
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { query } = context.query;
   const res = await fetch(
-    `https://api.jikan.moe/v3/search/anime?q=${query}&page=1&rated=g&rated=pg&rated=pg13&rated=r17`
+    `https://api.jikan.moe/v3/search/anime?q=${query}&page=1&genre=12&genre_exclude=1`
   );
   const data = await res.json();
   return {
