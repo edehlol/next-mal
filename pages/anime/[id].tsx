@@ -37,6 +37,7 @@ const AnimePage = ({ anime }: { anime: Anime }) => {
     return (
       <Layout>
         <h1 className="text-2xl mb-8">{anime.title}</h1>
+        <p>rating: {anime.rating}</p>
         {anime.trailer_url && (
           <iframe className="mb-8" title="video" width="560" height="315" src={anime.trailer_url} />
         )}

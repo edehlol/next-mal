@@ -13,7 +13,7 @@ export interface Anime {
   //   start_date: string;
   //   end_date: string;
   //   members: number;
-  //   rated: string;
+  rating: string;
   //   source: string;
   //   genres: string[];
   //   duration: number;
