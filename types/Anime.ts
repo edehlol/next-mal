@@ -4,7 +4,7 @@ export interface Anime {
   image_url: string;
   title: string;
   trailer_url: string | null;
-  related: any | null;
+  related: any;
   //   airing: boolean;
   //   synopsis: string;
   //   type: string;

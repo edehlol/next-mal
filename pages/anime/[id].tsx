@@ -11,7 +11,11 @@ const AnimePage = ({ anime }: { anime: Anime }) => {
 
   const renderRelatedAnime = () => {
     if (!anime.related) return null;
-    return Object.entries(anime.related).map(([key, value]) => {
+
+    const test = Object.entries(anime.related);
+    console.log(test);
+
+    return Object.entries(anime.related).map(([key, value]: any) => {
       return (
         <div key={key}>
           <h3 className="text-lg font-semibold">{key}</h3>
