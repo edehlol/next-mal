@@ -1,13 +1,18 @@
 import { GetServerSideProps } from 'next';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
 import AnimeList from '../../components/AnimeList';
 import Layout from '../../components/Layout';
 import { Anime } from '../../types/Anime';
 
-const SearchPage = ({ data }: { data: Anime[] }) => {
+const SearchPage = ({ data }: { data: any }) => {
+  const router = useRouter();
+  const query = router.query.query as string;
+
   console.log(data);
   return (
     <Layout>
-      <AnimeList list={data} />
+      <AnimeList data={data} query={query} />
     </Layout>
   );
 };
@@ -20,7 +25,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const data = await res.json();
   return {
     props: {
-      data: data.results,
+      data: data,
     },
   };
 };
