@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const ListItem = ({ anime }: { anime: Anime }) => {
   return (
-    <li key={anime.mal_id} className="w-full mb-8">
+    <li className="w-full mb-8">
       <Link href={`/anime/${anime.mal_id}`} passHref>
         <a className="">
           <div className="flex">
